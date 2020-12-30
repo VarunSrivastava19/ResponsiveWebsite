@@ -1,0 +1,94 @@
+html, body {
+    margin: 0;
+}
+.container {
+    display: grid;
+
+    min-height: 100vh;
+    
+    grid-template-areas: "head head head"
+                         "nav main aside"
+                         "nav foot foot";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 150px 1fr;
+}
+
+.container > header {
+    grid-area: head;
+    background-color: #180E3C;
+    color: #EDEAFA;
+    text-align: center;
+}
+
+.container > nav {
+    grid-area: nav;
+    background-color: #2F1B75;
+    color: #EDEAFA;
+}
+
+nav ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 1em 1em 1em 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2em;
+    position: relative;
+}
+
+nav ul li a {
+    padding-bottom: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    color: #EDEAFA;
+}
+
+nav ul li:hover {
+    background-color: #EDEAFA;
+    
+}
+
+nav ul li a:hover {
+    color: #5632d0;
+}
+
+.container > main {
+    grid-area: main;
+    background-color: #EDEAFA;
+}
+
+.container > footer {
+    grid-area: foot;
+    background-color: #180E3C;
+    color: #5632d0;
+}
+
+.container > aside {
+    grid-area: aside;
+    background-color: #2F1B75;
+    color: #EDEAFA;
+    width: 10rem;
+}
+
+/*Mobile view*/
+@media only screen and (max-width:768px) {
+    .container {
+        grid-template-areas: "head head head"
+                             "nav nav nav"
+                             "main main main"
+                             "aside aside aside"
+                             "foot foot foot";
+        
+    }
+    .container > nav {
+        grid-area: nav;
+        background-color: #2F1B75;
+        color: #EDEAFA;
+        height: 2rem;
+    }
+    
+}

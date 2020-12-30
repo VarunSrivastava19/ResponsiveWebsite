@@ -1,0 +1,25 @@
+body {
+    margin: 10px auto;
+    background-color: #fff;
+}
+.outerBox {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 10px;
+    background-color: #937CE1;
+    padding: 10px;
+}
+
+.outerBox > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    background-color: #25155B;
+    color: #F1EEFB;
+}
+
+.outerBox > div:hover {
+    background-color: #F1EEFB;
+    color: #25155B;
+
+}
