@@ -81,25 +81,27 @@ nav select {
 
 /*Mobile view*/
 @media only screen and (max-width:768px) {
+    body {
+        text-align: center;
+    }
     .container {
         grid-template-areas: "head head head"
                              "nav nav nav"
                              "main main main"
                              "aside aside aside"
                              "foot foot foot";
-        grid-template-rows: 5fr 1fr 10fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 10fr 2fr 1fr;
         
     }
     
     nav ul {display: none;}
-    .container > nav {
-        
-    }
-    nav select {
+    .container > nav select {
+        height: 100%;  
         display: inline-block;
-        width: 100%;
-        
-        
+        width: 100%; 
+        background-color: #2F1B75;
+        color: #EDEAFA;
+        text-align: center;
     }
 
     .container > aside {
