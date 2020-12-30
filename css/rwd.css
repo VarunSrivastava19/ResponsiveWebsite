@@ -8,9 +8,9 @@ html, body {
     
     grid-template-areas: "head head head"
                          "nav main aside"
-                         "nav foot foot";
-    grid-template-rows: 50px 1fr 30px;
-    grid-template-columns: 150px 1fr;
+                         "foot foot foot";
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-columns: 15% 10fr;
 }
 
 .container > header {
@@ -74,6 +74,11 @@ nav ul li a:hover {
     width: 10rem;
 }
 
+/* Hide the select menu for screen sizes Medium and above */
+nav select {
+    display: none;
+}
+
 /*Mobile view*/
 @media only screen and (max-width:768px) {
     .container {
@@ -82,13 +87,30 @@ nav ul li a:hover {
                              "main main main"
                              "aside aside aside"
                              "foot foot foot";
+        grid-template-rows: 5fr 1fr 10fr 2fr 1fr;
         
     }
+    
+    nav ul {display: none;}
     .container > nav {
-        grid-area: nav;
-        background-color: #2F1B75;
-        color: #EDEAFA;
-        height: 2rem;
+        
     }
+    nav select {
+        display: inline-block;
+        width: 100%;
+        
+        
+    }
+
+    .container > aside {
+        width: 100%;
+        
+    }
+
+    .container > main {
+        position: relative;
+        
+    }
+    
     
 }
