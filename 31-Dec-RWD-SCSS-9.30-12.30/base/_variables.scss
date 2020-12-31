@@ -1,0 +1,14 @@
+$clrs : (#5632d0, #EDEAFA);
+$bg-clrs : (#180E3C, #2F1B75, );
+//Grid vars
+$MinWidth: 100vw
+//for desktop
+$gridTmpRows: (1fr, 1fr, 8fr);
+$gridTmpCols: (1fr 1fr 2fr 1fr);
+$minHeight: 100vh;
+//for tablet
+$tabWidths: (768px,1024px);
+$tabGridTmpRows: (1fr 1fr 2fr 4fr 2fr 1fr);
+//for Mobile
+$mobWidth: 767px;
+$mobGridTmpRows: (1fr 1fr 2fr 4fr 2fr 1fr);

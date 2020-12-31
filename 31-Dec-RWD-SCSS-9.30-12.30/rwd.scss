@@ -1,0 +1,15 @@
+@import 'base/variables';
+html, body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    min-height: $minHeight;
+    grid-template-areas: "head head head head"
+	                      "nav nav nav nav"
+						  "blank sect main aside"
+						  "foot foot foot foot"
+                          ;
+    
+}

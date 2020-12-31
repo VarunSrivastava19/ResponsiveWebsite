@@ -1,0 +1,234 @@
+html, body {
+    margin: 0;
+    color: #000;
+    
+}
+
+/*Card styling*/
+#card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 2%;
+}
+#card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+	display: grid;
+	min-height: 100vh;
+	grid-template-areas: "head head head head"
+	                      "nav nav nav nav"
+						  "blank sect main aside"
+						  "foot foot foot foot"
+						  ;
+	grid-template-rows: 1fr 1fr 8fr 1fr;
+	                    /*head nav (blank+Sect+Main+Aside) foot*/
+	grid-template-columns: 0.5fr 1.5fr 3fr 1fr;
+                        /* blank sect main aside */
+    /* background-color: #180E3C; */
+    /* color: #fff; */
+    grid-gap: 0 2%;
+    
+}
+
+.container > header {
+    grid-area: head;
+    background-color: #180E3C;
+    color: #EDEAFA;
+    text-align: center;
+}
+/*Hide the dropdown select for desktops/tabs*/
+select {
+    display: none;
+}
+
+.container > nav {
+    grid-area: nav;
+    margin: 0 auto;
+}
+
+nav ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 1em 1em 1em 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: .01em;
+    position: relative;
+    padding: 1em 3em;    
+}
+
+nav li a {
+    /* padding-bottom: 1em; */
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    color: #EDEAFA;
+}
+
+nav ul li:hover {
+    background-color: #EDEAFA;
+    
+}
+nav ul li a:hover {
+    color: #180E3C;
+    
+}
+.container > .blank {
+    grid-area: blank;
+    padding: 10px;
+}
+
+.container > section {
+    grid-area: sect;
+    padding: 10px;
+}
+
+.container > main {
+    grid-area: main;
+    background-color: #EDEAFA;
+    color: #180E3C;
+    padding: 10px;
+}
+
+.container > aside {
+    grid-area: aside;
+    padding: 10px;
+}
+
+
+
+.container > footer {
+    grid-area: foot;
+}
+
+/*For Tablets*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+    
+
+    
+    /*Enable breadcrumbs for content by grid-template-areas */
+    .container {
+        display: grid;
+        grid-template-areas: "head head head"
+                             "nav nav nav"
+                             "sect sect sect"
+                             "main main main"
+                             "aside aside aside"
+                             "foot foot foot";
+        grid-template-rows: 1fr 1fr 2fr 4fr 2fr 1fr;
+    }
+    /*Dropdown Select menu nav is still hidden*/
+    /*Hiding blank because of no specific use*/
+    .container > .blank {
+        display: none;
+    }
+    .container > header {
+        grid-area: head;
+        min-width: 100vw;
+    }
+
+    .container > nav {
+        grid-area: nav;
+        min-width: 100vw;
+        
+    }
+
+    
+    .container > section {
+        grid-area: sect;
+        min-width: 100vw;
+
+    }
+
+    .container > main {
+        grid-area: main;
+        min-width: 100vw;
+    }
+
+    .container > aside {
+        grid-area: aside;
+        min-width: 100vw;
+    }
+
+    .container > footer {
+        grid-area: foot;
+        min-width: 100vw;
+    }
+
+}
+
+/*Mobile View*/
+@media only screen and (max-width:767px) {
+    body {
+        text-align: center;
+    }
+    .container {
+        display: grid;
+        grid-template-areas: "head head head"
+                             "nav nav nav"
+                             "sect sect sect"
+                             "main main main"
+                             "aside aside aside"
+                             "foot foot foot";
+    grid-template-rows: 1fr 1fr 2fr 4fr 2fr 1fr;
+    }
+
+    /*Hiding blank because of no specific use*/
+    .container > .blank {
+        display: none;
+    }
+    /*Hiding Top Nav Bar for Select - dropdown Nav Bar*/
+    nav ul {display: none;}
+    /*Enable Select - Dropdown Nav Bar*/
+    .container > nav select {
+        height: 100%;
+        display: inline-block;
+        width: 100vw;
+        background-color: #180E3C;
+        color: #EDEAFA;
+    }
+    .container > header {
+        grid-area: head;
+        min-width: 100vw;
+    }
+
+    .container > nav {
+        grid-area: nav;
+        min-width: 100vw;
+        
+    }
+
+    
+    .container > section {
+        grid-area: sect;
+        min-width: 100vw;
+    }
+
+    .container > main {
+        grid-area: main;
+        min-width: 100vw;
+    }
+
+    .container > aside {
+        grid-area: aside;
+        min-width: 100vw;
+    }
+
+    .container > footer {
+        grid-area: foot;
+        min-width: 100vw;
+    }
+}
+
+
+
+
